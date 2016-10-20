@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('nights', function(){
+    this.route('camp', {path: ':night_id'});
+  });
 });
 
 export default Router;
